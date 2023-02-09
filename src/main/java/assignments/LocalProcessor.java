@@ -38,9 +38,7 @@ public class LocalProcessor {
     @ListIteratorAnnotation
     public void listIterator(List<String> stringList) {
         stringArrayList = new LinkedList<>(stringList);
-        for (String str : stringArrayList) {
-            System.out.println(str.hashCode());
-        }
+        stringArrayList.forEach(System.out::println);
     }
 
     @FullNameProcessorGeneratorAnnotation
